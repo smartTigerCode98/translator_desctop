@@ -1,0 +1,1 @@
+pyuic5 ouput_table.ui -o output_table.py

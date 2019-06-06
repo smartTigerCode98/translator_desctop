@@ -1,0 +1,5 @@
+tiger m1 { int a, b
+start a = 1
+$zysik: repeat a = 1 until a; > 0
+if a; > 0 goto $zysik finish
+}

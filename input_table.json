@@ -1,0 +1,277 @@
+[
+  {
+  "alfa" : 1,
+  "transition_label" : [ "tiger" ],  "beta" : [ 2 ],
+  "stack" : [ null ],   "semantic_subroutine" : {
+  "error" : "Expected keyword 'tiger' on line "
+  }   
+},
+  {
+  "alfa" : 2,
+  "transition_label" : [ "id" ],  "beta" : [ 3 ],
+  "stack" : [ null ],   "semantic_subroutine" : {
+  "error" : "Expected name program on line "
+  }   
+},
+  {
+  "alfa" : 3,
+  "transition_label" : [ "\\n" ],  "beta" : [ 4 ],
+  "stack" : [ null ],   "semantic_subroutine" : {
+  "error" : "Expected delimiter(enter) on line "
+  }   
+},
+  {
+  "alfa" : 4,
+  "transition_label" : [ "{" ],  "beta" : [ 5 ],
+  "stack" : [ null ],   "semantic_subroutine" : {
+  "error" : "Expected opening brace '{' on line "
+  }   
+},
+  {
+  "alfa" : 5,
+  "transition_label" : [ "\\n" ],  "beta" : [ 6 ],
+  "stack" : [ null ],   "semantic_subroutine" : {
+  "error" : "Expected delimiter(enter) on line "
+  }   
+},
+  {
+  "alfa" : 6,
+  "transition_label" : [ "int", "float" ],  "beta" : [ 7 ],
+  "stack" : [ null ],   "semantic_subroutine" : {
+  "error" : "Expected type(int or float) on line "
+  }   
+},
+  {
+  "alfa" : 7,
+  "transition_label" : [ "id" ],  "beta" : [ 8 ],
+  "stack" : [ null ],   "semantic_subroutine" : {
+  "error" : "Expected identifiers on line "
+  }   
+},
+  {
+  "alfa" : 8,
+  "transition_label" : [ "\\n", "," ],  "beta" : [ 9, 7 ],
+  "stack" : [ null, null ],   "semantic_subroutine" : {
+  "error" : "Expected delimiter(enter) on line "
+  }   
+},
+  {
+  "alfa" : 9,
+  "transition_label" : [ "start", "int", "float" ],  "beta" : [ 10, 7, 7 ],
+  "stack" : [ null, null, null ],   "semantic_subroutine" : {
+  "error" : "Expected keyword 'start' on line "
+  }   
+},
+  {
+  "alfa" : 10,
+  "transition_label" : [ "\\n" ],  "beta" : [ 11 ],
+  "stack" : [ null ],   "semantic_subroutine" : {
+  "error" : "Expected delimiter(enter) on line "
+  }   
+},
+  {
+  "alfa" : 11,
+  "transition_label" : [ "label" ],  "beta" : [ 12 ],
+  "stack" : [ null ],   "semantic_subroutine" : {
+  "beta" : 20, "stack" : 13  }   
+},
+  {
+  "alfa" : 12,
+  "transition_label" : [ ":" ],  "beta" : [ 20 ],
+  "stack" : [ 13 ],   "semantic_subroutine" : {
+  "error" : "Expected symbol ':' on line "
+  }   
+},
+  {
+  "alfa" : 13,
+  "transition_label" : [ "finish", "\\n" ],  "beta" : [ 14, 11 ],
+  "stack" : [ null, null ],   "semantic_subroutine" : {
+  "error" : "Expected keyword 'finish' on line "
+  }   
+},
+  {
+  "alfa" : 14,
+  "transition_label" : [ "\\n" ],  "beta" : [ 15 ],
+  "stack" : [ null ],   "semantic_subroutine" : {
+  "error" : "Expected delimiter(enter) on line "
+  }   
+},
+  {
+  "alfa" : 15,
+  "transition_label" : [ "}" ],  "beta" : [ 16 ],
+  "stack" : [ null ],   "semantic_subroutine" : {
+  "error" : "Expected closing brace '}' on line "
+  }   
+},
+  {
+  "alfa" : 16,
+  "transition_label" : [ null ],  "beta" : [ null ],
+  "stack" : [ null ],   "semantic_subroutine" : {
+  "exit" : "exit"
+  }   
+},
+
+
+  {
+  "alfa" : 20,
+  "transition_label" : ["id", "cin", "echo", "repeat", "if"],  "beta" : [21, 23, 26, 29, 51],
+  "stack" : [null, null, null, null, 33],   "semantic_subroutine" : {
+  "error" : "Expected operator on line "
+  }   
+},
+  {
+  "alfa" : 21,
+  "transition_label" : [ "=" ],  "beta" : [ 41 ],
+  "stack" : [ 22 ],   "semantic_subroutine" : {
+  "error" : "Expected symbol '=' on line "
+  }   
+},
+  {
+  "alfa" : 22,
+  "transition_label" : [ null ],  "beta" : [ null ],
+  "stack" : [ null ],   "semantic_subroutine" : {
+  "exit" : "exit"
+  }   
+},
+  {
+  "alfa" : 23,
+  "transition_label" : [ ">>" ],  "beta" : [ 24 ],
+  "stack" : [ null ],   "semantic_subroutine" : {
+  "error" : "Expected '>>' after 'cin' on line  "
+  }   
+},
+  {
+  "alfa" : 24,
+  "transition_label" : [ "id" ],  "beta" : [ 25 ],
+  "stack" : [ null ],   "semantic_subroutine" : {
+  "error" : "Expected identifier on line  "
+  }   
+},
+  {
+  "alfa" : 25,
+  "transition_label" : [ ">>" ],  "beta" : [ 24 ],
+  "stack" : [ null ],   "semantic_subroutine" : {
+  "exit" : "exit"
+  }   
+},
+  {
+  "alfa" : 26,
+  "transition_label" : [ "<<" ],  "beta" : [ 27 ],
+  "stack" : [ null ],   "semantic_subroutine" : {
+  "error" : "Expected '<<' after 'echo' on line "
+  }   
+},
+  {
+  "alfa" : 27,
+  "transition_label" : [ "id" ],  "beta" : [ 28 ],
+  "stack" : [ null ],   "semantic_subroutine" : {
+  "error" : "Expected identifier on line  "
+  }   
+},
+  {
+  "alfa" : 28,
+  "transition_label" : [ "<<" ],  "beta" : [ 27 ],
+  "stack" : [ null ],   "semantic_subroutine" : {
+  "exit" : "exit"
+  }   
+},
+  {
+  "alfa" : 29,
+  "transition_label" : [ "label" ],  "beta" : [ 30 ],
+  "stack" : [ null ],   "semantic_subroutine" : {
+  "beta" : 20, "stack" : 31 
+ }   
+},
+  {
+  "alfa" : 30,
+  "transition_label" : [ ":" ],  "beta" : [ 20 ],
+  "stack" : [ 31 ],   "semantic_subroutine" : {
+  "error" : "Expected symbol ':' after label name on line "
+  } 
+},
+  {
+  "alfa" : 31,
+  "transition_label" : ["until", "\\n"],  "beta" : [51, 29],
+  "stack" : [ 32, null ],   "semantic_subroutine" : {
+  "error" : "Expected keyword 'until' after list of operation on line " }   
+} ,
+  {
+  "alfa" : 32,
+  "transition_label" : [ null ],  "beta" : [ null ],
+  "stack" : [ null ],   "semantic_subroutine" : {
+  "exit" : "exit"
+  }   
+},
+  {
+  "alfa" : 33,
+  "transition_label" : [ "goto" ],  "beta" : [ 34 ],
+  "stack" : [ null ],   "semantic_subroutine" : {
+  "error" : "Expected keyword 'goto' on line "
+  }   
+},
+  {
+  "alfa" : 34,
+  "transition_label" : [ "label" ],  "beta" : [ 35 ],
+  "stack" : [ null ],   "semantic_subroutine" : {
+  "error" : "Expected label after keyword 'goto' on line  "
+  }   
+},
+  {
+  "alfa" : 35,
+  "transition_label" : [ null ],  "beta" : [ null ],
+  "stack" : [ null ],   "semantic_subroutine" : {
+  "exit" : "exit"
+  }   
+},
+
+
+  {
+  "alfa" : 41,
+  "transition_label" : ["id", "const", "("],  "beta" : [ 43, 43, 41 ],
+  "stack" : [ null, null, 42 ],   "semantic_subroutine" : {
+  "error" : "Expected id or const or '(' on line "
+  }   
+},
+  {
+  "alfa" : 42,
+  "transition_label" : [ ")"],  "beta" : [ 43 ],
+  "stack" : [ null ],   "semantic_subroutine" : {
+  "error" : "Expected ')' on line "
+  }   
+},
+  {
+  "alfa" : 43,
+  "transition_label" : [ "+", "-", "*", "/"],  "beta" : [ 41 ],
+  "stack" : [ null ],   "semantic_subroutine" : {
+  "exit" : "exit "
+  }   
+},
+
+
+  {
+  "alfa" : 51,
+  "transition_label" : [ "not", "(" ],  "beta" : [ 51, 51 ],
+  "stack" : [ null, 54 ],   "semantic_subroutine" : {
+  "beta" : 41, "stack" : 52   }   
+},
+  {
+  "alfa" : 52,
+  "transition_label" : [ ">", ">=", "==", "!=", "<=", "<" ],  "beta" : [ 41 ],
+  "stack" : [ 53 ],   "semantic_subroutine" : {
+  "error" : "Expected sign relation on line "  }   
+},
+  {
+  "alfa" : 53,
+  "transition_label" : [ "and", "or" ],  "beta" : [ 51 ],
+  "stack" : [ null ],   "semantic_subroutine" : {
+  "exit" : "exit "
+  }   
+},
+  {
+  "alfa" : 54,
+  "transition_label" : [ ")"],  "beta" : [ 53 ],
+  "stack" : [ null ],   "semantic_subroutine" : {
+  "error" : "Expected ')' on line  " }   
+} 
+
+ ]

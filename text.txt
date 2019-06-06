@@ -1,0 +1,16 @@
+tiger m1
+{
+int a, b
+float c,g
+int d, l
+float h
+start
+$zysik: cin >> d
+$cat: echo << d
+d = 4
+repeat a = 2
+ until not (a > b) and (c != d)
+if a>b goto $cat1
+$cat1: cin >> d
+finish
+}
